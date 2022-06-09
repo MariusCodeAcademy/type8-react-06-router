@@ -1,4 +1,4 @@
-import { Route } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 
 import './App.css';
 import MainNav from './components/MainNav';
@@ -10,13 +10,17 @@ function App() {
   return (
     <div className='App'>
       <MainNav />
-      {/* <HomePage /> */}
-      <Route path='/about'>
-        <AboutPage />
-      </Route>
-      <Route path='/contact'>
-        <ContactPage />
-      </Route>
+      <Switch>
+        <Route path='/about'>
+          <AboutPage />
+        </Route>
+        <Route path='/contact'>
+          <ContactPage />
+        </Route>
+        <Route path='/'>
+          <HomePage />
+        </Route>
+      </Switch>
     </div>
   );
 }
