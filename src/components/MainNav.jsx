@@ -6,6 +6,9 @@ const MainNav = () => {
       <NavLink className='nav-link' exact to='/'>
         Home
       </NavLink>
+      <NavLink className='nav-link' to='/products'>
+        Products
+      </NavLink>
       <NavLink className='nav-link' to='/about'>
         About
       </NavLink>
