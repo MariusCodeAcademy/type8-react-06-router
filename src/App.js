@@ -17,7 +17,7 @@ function App() {
         <Route path='/contact'>
           <ContactPage />
         </Route>
-        <Route path='/'>
+        <Route exact path='/'>
           <HomePage />
         </Route>
       </Switch>
