@@ -257,6 +257,13 @@
       "item": "Jacket",
       "price": 299,
       "id": 2
+    },
+    {
+      "item": "Laptop",
+      "price": 599,
+      "itemId": "145",
+      "qty": 1,
+      "id": 3
     }
   ]
 }
