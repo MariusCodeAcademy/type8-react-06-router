@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import SingleProductCard from '../components/products/SingleProductCard';
 
 const ProductPage = () => {
   console.log('ProductPage ran');
@@ -11,14 +12,20 @@ const ProductPage = () => {
     const respt = await fetch('/db/products.json');
     const dataInJs = await respt.json();
     console.log('dataInJs ===', dataInJs);
-    const onlyDataWeNeed = dataInJs.map((pObj) => {
-      return {
-        id: pObj.id,
-        title: pObj.title,
-        price: pObj.price,
-        image: pObj.image,
-      };
-    });
+    // const onlyDataWeNeed = dataInJs.map((pObj) => {
+    //   return {
+    //     id: pObj.id,
+    //     title: pObj.title,
+    //     price: pObj.price,
+    //     image: pObj.image,
+    //   };
+    // });
+    const onlyDataWeNeed = dataInJs.map(({ id, title, price, image }) => ({
+      id,
+      title,
+      price,
+      image,
+    }));
     console.log('onlyDataWeNeed  ===', onlyDataWeNeed);
     setProductsArr(dataInJs);
   };
@@ -32,6 +39,10 @@ const ProductPage = () => {
   return (
     <div>
       <h1>Our products</h1>
+      <div className='product-grid'>
+        {/* map per productsArr id make  <SingleProductCard /> */}
+        <SingleProductCard />
+      </div>
     </div>
   );
 };
