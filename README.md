@@ -11,7 +11,8 @@
 2. prideti navLink ir Route i ProductPage
 3. ProductPage kreipiamesi adresa "/db/products.json":
    3.1 gaunam duomenis
-
+   3.2 issaugom duomenis state
+   3.3 (extra) issaugom tik: id, kaina, img ir title
 4. Susikuriam <SingleProductCard /> komponenta. Jis gauna id, title, price, ir img ir atvaizduoja kortele.
 
 5. <ProductsPage /> generuojam <SingleProductCard /> is gautu duomenu i state.
